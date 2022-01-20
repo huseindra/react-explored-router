@@ -1,5 +1,6 @@
 import { Fragment } from "react"
-import {  Route } from "react-router-dom"
+import { useRouteMatch } from "react-router-dom"
+import {  Link, Route } from "react-router-dom"
 import { useParams } from "react-router-dom/cjs/react-router-dom.min"
 import Comments from  '../components/comments/Comments'
 import HighlitedQuote from '../components/quotes/HighlightedQuote'
@@ -17,7 +18,7 @@ const DUMMY_DATA = [
     }
 ]
 const QuoteDetailPage = () =>{
-
+    const match = useRouteMatch()
     const params = useParams()
 
 
@@ -29,8 +30,12 @@ const QuoteDetailPage = () =>{
     return (
     <Fragment>
         <HighlitedQuote text={quote.text} author={quote.author}/>
-
-        <Route path={`/quotes/${params.quoteId}/comments`}>
+        <Route path={match.path} exact>
+            <div className="centered">
+                <Link className="btn--flat" to={`${match.url}/comments`}> Load Comments</Link>
+            </div>
+        </Route>
+        <Route path={`${match.path}/comments`}>
             <Comments />
         </Route>
     </Fragment>)
