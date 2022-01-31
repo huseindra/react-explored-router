@@ -1,7 +1,6 @@
 import { Fragment, useEffect } from "react"
-import { useRouteMatch } from "react-router-dom"
+import { useMatch, useParams } from "react-router-dom"
 import {  Link, Route } from "react-router-dom"
-import { useParams } from "react-router-dom/cjs/react-router-dom.min"
 import Comments from  '../components/comments/Comments'
 import HighlitedQuote from '../components/quotes/HighlightedQuote'
 import LoadingSpinner from "../components/UI/LoadingSpinner"
@@ -10,7 +9,7 @@ import { getSingleQuote } from "../lib/api"
 import NotFoundQuote from "./NotFoundQuote"
 
 const QuoteDetailPage = () =>{
-    const match = useRouteMatch()
+    const match = useMatch()
     const params = useParams()
 
     const {quoteId} = params

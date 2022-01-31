@@ -1,5 +1,5 @@
 import { Fragment, useRef } from 'react';
-import { Prompt } from 'react-router-dom';
+// import { Prompt } from 'react-router-dom';
 import { useState } from 'react/cjs/react.development';
 
 import Card from '../UI/Card';
@@ -31,7 +31,7 @@ const QuoteForm = (props) => {
 
   return (
     <Fragment>
-      <Prompt when={isEntering} message={(location) => 'Are you sure want to leave?'} />
+      {/* <Prompt when={isEntering} message={(location) => 'Are you sure want to leave?'} /> */}
       <Card>
       <form onFocus={onFocushandler} className={classes.form} onSubmit={submitFormHandler}>
         {props.isLoading && (
