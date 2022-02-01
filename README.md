@@ -2,8 +2,8 @@
 In this repository, you will learn about `react router v6` and `CRUD with Firebase`
 
 ## pre-requisites
-- > Understanding javascript
-- > Understanding `react component`
+> Understanding javascript <br>
+> Understanding `react component`
 
 ## todo
 - [x] slicing into component 
@@ -12,6 +12,6 @@ In this repository, you will learn about `react router v6` and `CRUD with Fireba
 - [x] add loading spinner
 
 ## how to clone
-- > `git clone https://github.com/huseindra/react-explored-router.git`
-- > `npm install`
-- > `npm start`
+> `git clone https://github.com/huseindra/react-explored-router.git` <br>
+> `npm install` <br>
+> `npm start` 
