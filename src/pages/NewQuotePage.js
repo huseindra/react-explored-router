@@ -9,7 +9,7 @@ const NewQuotePage = () =>{
 
     useEffect(() => {
         if(status === 'completed'){
-            navigate.push('/quotes')
+            navigate('/quotes')
         }
     }, [status, navigate])
     const addQuoteHandler = (quoteData) => {
